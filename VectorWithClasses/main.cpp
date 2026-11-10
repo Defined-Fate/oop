@@ -34,7 +34,7 @@ public:
 
   void at(uint64_t n){
     if(n < v_size){
-
+      std::cout << "Out of scope" << '\n'; 
     }
   }
 
@@ -48,7 +48,7 @@ public:
 private:
   int calc_capacity(uint64_t size) {
     uint64_t myC = 2;
-    while(size > myC) myC*=2;
+    while(size > myC) myC <<= 1;
 
     return myC;
   }
