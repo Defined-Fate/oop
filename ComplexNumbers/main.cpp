@@ -45,6 +45,34 @@ struct ComplexNumbers {
     return {real / n, imag / n};
   }
 
+  ComplexNumbers operator+=(ComplexNumbers &z){
+    return *this = *this + z;
+  }
+
+  ComplexNumbers operator-=(ComplexNumbers &z){
+    return *this = *this - z;
+  }
+
+  ComplexNumbers operator*=(ComplexNumbers &z){
+    return *this = *this * z;
+  }
+
+  ComplexNumbers operator/=(ComplexNumbers &z){
+    return *this = *this / z;
+  }
+
+  ComplexNumbers operator*=(float &z){
+    return *this = *this + z;
+  }
+
+  ComplexNumbers operator/=(float &z){
+    return *this = *this / z;
+  }
+
+  ComplexNumbers operator==(ComplexNumbers &z){
+    
+  }
+
   friend std::ostream &operator<<(std::ostream &os, const ComplexNumbers &z) {
   	return os << z.real << " + " << z.imag << 'i';
   }
